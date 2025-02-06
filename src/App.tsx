@@ -7,7 +7,7 @@ const app = new Hono()
 
 let count = 0;
 
-const Count: FC = (props) => {
+const Count: FC<{ count: number }> = (props) => {
   return (
     <h3 id="count">{props.count}</h3>
   )
@@ -19,6 +19,7 @@ app.get('/plus', (c) => {
   console.log("plus", count);
   return c.render(<Count count={count} />)
 })
+
 
 const PlusButton = () => {
   return (
@@ -39,7 +40,7 @@ const MinusButton = () => {
     )
 }
 
-
+import Explore from './Explore'
 const Counter = () => {
   return (
     <div>
@@ -52,6 +53,8 @@ const Counter = () => {
   )
 }
 
+import Profile from './Profile'
+
 app.get('/', (c) => {
   return c.render(
     <html>
@@ -60,6 +63,8 @@ app.get('/', (c) => {
       </head>
       <body>
         <Counter />
+        <Explore />
+        <Profile />
       </body>
     </html>
   )
