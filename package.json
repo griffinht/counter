@@ -4,8 +4,9 @@
   "scripts": {
     "dev": ". ./.env && vite",
     "build": "vite build",
-    "preview": "wrangler pages dev",
-    "deploy": "npm run build && wrangler pages deploy"
+    "run": ". ./.env && vite --port 7238",
+    "oldpreview": "wrangler pages dev",
+    "olddeploy": "npm run build && wrangler pages deploy"
   },
   "dependencies": {
     "@emotion/styled": "^11.14.0",
