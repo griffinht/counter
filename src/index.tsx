@@ -10,7 +10,6 @@ declare module 'hono/jsx' {
 }
 
 
-
 import app from './App'
 
 import { renderer } from './renderer'
